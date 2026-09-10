@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Family Relationship Model
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>
+        Family Relationship Model
+    </h1>
+
+    <p>
+        Manage family members and relationships
+    </p>
+
+</header>
+
+
+<main>
+
+
+<!-- ========================= -->
+<!-- ADD MEMBER -->
+<!-- ========================= -->
+
+<section class="card">
+
+    <h2>
+        Add Family Member
+    </h2>
+
+    <input
+        type="text"
+        id="name"
+        placeholder="Enter name"
+    >
+
+    <input
+        type="number"
+        id="age"
+        placeholder="Enter age"
+    >
+
+    <select id="gender">
+
+        <option value="">
+            Select Gender
+        </option>
+
+        <option value="Male">
+            Male
+        </option>
+
+        <option value="Female">
+            Female
+        </option>
+
+        <option value="Other">
+            Other
+        </option>
+
+    </select>
+
+    <button onclick="addMember()">
+        Add Member
+    </button>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- FAMILY MEMBERS -->
+<!-- ========================= -->
+
+<section class="card">
+
+    <h2>
+        Family Members
+    </h2>
+
+    <button onclick="loadMembers()">
+        Refresh Members
+    </button>
+
+    <div id="membersList"></div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- ADD RELATIONSHIP -->
+<!-- ========================= -->
+
+<section class="card">
+
+    <h2>
+        Add Relationship
+    </h2>
+
+
+    <select id="person1">
+
+        <option value="">
+            Select First Person
+        </option>
+
+    </select>
+
+
+    <select id="relationship">
+
+        <option value="">
+            Select Relationship
+        </option>
+
+        <option value="Father">
+            Father
+        </option>
+
+        <option value="Mother">
+            Mother
+        </option>
+
+        <option value="Son">
+            Son
+        </option>
+
+        <option value="Daughter">
+            Daughter
+        </option>
+
+        <option value="Brother">
+            Brother
+        </option>
+
+        <option value="Sister">
+            Sister
+        </option>
+
+        <option value="Husband">
+            Husband
+        </option>
+
+        <option value="Wife">
+            Wife
+        </option>
+
+        <option value="Uncle">
+            Uncle
+        </option>
+
+        <option value="Aunt">
+            Aunt
+        </option>
+
+        <option value="Grandfather">
+            Grandfather
+        </option>
+
+        <option value="Grandmother">
+            Grandmother
+        </option>
+
+    </select>
+
+
+    <select id="person2">
+
+        <option value="">
+            Select Second Person
+        </option>
+
+    </select>
+
+
+    <button onclick="addRelationship()">
+        Add Relationship
+    </button>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- RELATIONSHIPS -->
+<!-- ========================= -->
+
+<section class="card">
+
+    <h2>
+        Family Relationships
+    </h2>
+
+    <button onclick="loadRelationships()">
+        Refresh Relationships
+    </button>
+
+    <div id="relationshipsList"></div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- FIND RELATIONSHIP -->
+<!-- ========================= -->
+
+<section class="card">
+
+    <h2>
+        Find Relationship
+    </h2>
+
+
+    <select id="findPerson1">
+
+        <option value="">
+            Select First Person
+        </option>
+
+    </select>
+
+
+    <select id="findPerson2">
+
+        <option value="">
+            Select Second Person
+        </option>
+
+    </select>
+
+
+    <button onclick="findRelationship()">
+        Find Relationship
+    </button>
+
+
+    <div
+        id="relationshipResult"
+        class="result"
+    ></div>
+
+</section>
+
+
+</main>
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
